@@ -1,5 +1,6 @@
 //
 //  NamingService.swift
+//  DomainsResolution
 //
 //  Created by Sun on 2020/8/12.
 //

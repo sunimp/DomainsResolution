@@ -1,5 +1,4 @@
 // swift-tools-version:5.10
-// The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
@@ -12,18 +11,21 @@ let package = Package(
     products: [
         .library(
             name: "DomainsResolution",
-            type: nil,
-            targets: ["DomainsResolution"])
+            targets: ["DomainsResolution"]
+        )
     ],
     dependencies: [
         .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", .upToNextMajor(from: "1.8.3")),
         .package(url: "https://github.com/attaswift/BigInt.git", from: "5.4.1"),
-        .package(url: "https://github.com/nicklockwood/SwiftFormat.git", from: "0.54.3"),
+        .package(url: "https://github.com/nicklockwood/SwiftFormat.git", from: "0.54.6"),
     ],
     targets: [
         .target(
             name: "DomainsResolution",
-            dependencies: ["CryptoSwift", "BigInt"],
+            dependencies: [
+                "CryptoSwift",
+                "BigInt"
+            ],
             resources: [
                 .process("Resources/UNS/resolver-keys.json"),
                 .process("Resources/UNS/unsProxyReader.json"),
@@ -35,9 +37,8 @@ let package = Package(
             swiftSettings: [.define("INSIDE_PM")]
         ),
         .testTarget(
-            name: "ResolutionTests",
+            name: "DomainsResolutionTests",
             dependencies: ["DomainsResolution"],
-            exclude: ["Info.plist"],
             swiftSettings: [.define("INSIDE_PM")]
         )
     ]

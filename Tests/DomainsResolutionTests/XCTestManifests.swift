@@ -1,7 +1,8 @@
 //
 //  XCTestManifests.swift
+//  DomainsResolution
 //
-//  Created by Sun on 2020/9/30.
+//  Created by Sun on 2024/8/13.
 //
 
 import XCTest

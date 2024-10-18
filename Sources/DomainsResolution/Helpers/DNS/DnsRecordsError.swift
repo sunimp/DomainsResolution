@@ -1,5 +1,6 @@
 //
 //  DnsRecordsError.swift
+//  DomainsResolution
 //
 //  Created by Sun on 2020/12/19.
 //

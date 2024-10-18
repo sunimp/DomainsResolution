@@ -1,5 +1,6 @@
 //
 //  Types.swift
+//  DomainsResolution
 //
 //  Created by Sun on 2020/9/18.
 //
